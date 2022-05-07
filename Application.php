@@ -68,7 +68,7 @@ class Application
         
         $this->inventory[] = $product;
 
-        echo PHP_EOL . 'Proizvod je dodan u Vasu kosaricu.' . PHP_EOL;
+        echo PHP_EOL . 'Proizvod je dodan u Vas inventar.' . PHP_EOL;
 
         $this->inventoryMenu();
     }
@@ -170,14 +170,14 @@ class Application
         for($i=0;$i<count($this->cart);$i++){
             echo $this->cart[$i]->getSku() . '. ' . $this->cart[$i]->getName() 
             . ' ' . $this->cart[$i]->getQuantity() 
-            . ' pcs X ' . $this->cart[$i]->getQuantity()
+            . ' komada x ' . $this->cart[$i]->getQuantity()
             . '$' . PHP_EOL;
         }
         $delete = Controller::provjeraInteger('Unesite SKU broj proizvoda kojeg zelite ukloniti iz kosarice: ');
         
         array_splice($this->cart,$delete-1,1);
 
-        echo 'Proizvod je uklonjen iz kosarice' . PHP_EOL;
+        echo 'Proizvod je uklonjen iz kosarice.' . PHP_EOL;
         $this->cartMenu();
     }
     //Checkout-prikaz stanja u kosarici

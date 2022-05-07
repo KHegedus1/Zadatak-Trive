@@ -49,7 +49,25 @@ class Controller
         while (true) {
             echo $message;
             $Input = (float) fgets($app);
+            $Input = (float)number_format($Input, 2, '.', ' ');
             if($Input!=0){
+                return $Input;
+            }
+            echo $error . PHP_EOL;
+        }
+    }
+
+    //Kontroler koji provjerava je li unos korisnika jednak broju odredjenog proizvoda u kosarici prije brisanja
+
+    public  function provjeraBrisanje(
+        $message,
+        $error='Ne mozete ukloniti proizvod iz kosarice. Vas unos ne odgovara stanju u kosarici.')
+    {
+        $app = fopen('php://stdin','r');
+        while (true) {
+            echo $message;
+            $Input = (float) fgets($app);
+            if($Input<=$quantity){
                 return $Input;
             }
             echo $error . PHP_EOL;

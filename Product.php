@@ -1,5 +1,5 @@
 <?php
-//Koristenje get i set metoda na klasi proizvod
+//Koristenje get i set metoda na klasi Product
 
 
 class Product

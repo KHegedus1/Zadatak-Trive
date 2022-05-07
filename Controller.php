@@ -66,8 +66,8 @@ class Controller
         $app = fopen('php://stdin','r');
         while (true) {
             echo $message;
-            $Input = (float) fgets($app);
-            if($Input<=$quantity){
+            $Input = fgets($app);
+            if($Input>1){
                 return $Input;
             }
             echo $error . PHP_EOL;

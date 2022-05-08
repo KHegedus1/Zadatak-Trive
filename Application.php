@@ -121,7 +121,7 @@ class Application
             echo $this->inventory[$i]->getSku() . '. ' . $this->inventory[$i]->getName() 
             . ' ' . $this->inventory[$i]->getQuantity() 
             . ' komada ' . $this->inventory[$i]->getPrice() 
-            . '$' . PHP_EOL;
+            . 'kn' . PHP_EOL;
         }
 
         while (true) {
@@ -170,8 +170,8 @@ class Application
         for($i=0;$i<count($this->cart);$i++){
             echo $this->cart[$i]->getSku() . '. ' . $this->cart[$i]->getName() 
             . ' ' . $this->cart[$i]->getQuantity() 
-            . ' komada x ' . $this->cart[$i]->getQuantity()
-            . '$' . PHP_EOL;
+            . ' komada  ' . $this->cart[$i]->getQuantity()
+            . 'kn' . PHP_EOL;
         }
         $delete = Controller::provjeraInteger('Unesite SKU broj proizvoda kojeg zelite ukloniti iz kosarice: ');
         
